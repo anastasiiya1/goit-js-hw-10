@@ -1,10 +1,14 @@
 import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
+import iziToast from "izitoast";
+import "izitoast/dist/css/iziToast.min.css";
 
 let userSelectedDate;
 let countDownTimer;
 const startBtn = document.querySelector('button');
 const datetimePicker = document.querySelector('#datetime-picker');
+
+disableStartBtn();
 
 flatpickr('#datetime-picker', {
   enableTime: true,
@@ -29,12 +33,10 @@ flatpickr('#datetime-picker', {
 
 function disableStartBtn() {
   startBtn.disabled = true;
-  datetimePicker.disabled = true;
 }
 
 function enableStartBtn() {
   startBtn.disabled = false;
-  datetimePicker.disabled = false;
   startBtn.addEventListener('click', startCountdown);
 }
 

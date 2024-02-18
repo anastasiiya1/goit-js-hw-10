@@ -1,3 +1,6 @@
+import iziToast from "izitoast";
+import "izitoast/dist/css/iziToast.min.css";
+
 const promiseForm = document.querySelector("form");
 promiseForm.addEventListener("submit", createPromise);
 
