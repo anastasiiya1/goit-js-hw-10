@@ -76,10 +76,6 @@ function updateTimerDisplay(remainingTime) {
     addLeadingZero(seconds);
 }
 
-function formatTimeComponent(timeComponent) {
-  return timeComponent < 10 ? '0' + timeComponent : timeComponent;
-}
-
 function convertMs(ms) {
   const second = 1000;
   const minute = second * 60;
